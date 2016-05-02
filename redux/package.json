@@ -19,5 +19,8 @@
   "bugs": {
     "url": "https://github.com/rei-m/flux_training/issues"
   },
-  "homepage": "https://github.com/rei-m/flux_training#readme"
+  "homepage": "https://github.com/rei-m/flux_training#readme",
+  "dependencies": {
+    "redux": "^3.5.2"
+  }
 }
