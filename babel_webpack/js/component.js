@@ -20,6 +20,7 @@ export default class Component {
     this.render();
   }
   _onChange() {
+    console.trace();
     this.state = {count: store.getCount()};
     this.render()
   }
