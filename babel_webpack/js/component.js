@@ -13,19 +13,29 @@ export default class Component {
     store.on('CHANGE', () => {
       this._onChange();
     });
+
     this.textCount = this.elem.querySelector('#text-tount');
-    this.elem.addEventListener('click', () => {
-      this.tick();
+
+    this.elem.querySelector('#button__count-up').addEventListener('click', () => {
+      action.updateCount(this.state.count + 1);
     });
+
+    this.elem.querySelector('#button__count-down').addEventListener('click', () => {
+      action.updateCount(this.state.count - 1);
+    });
+
+    this.elem.querySelector('#button__count-up--async').addEventListener('click', () => {
+      setTimeout(() => {
+        action.updateCount(this.state.count + 1);
+      }, 2000);
+    });
+
     this.render();
   }
   _onChange() {
     console.trace();
     this.state = {count: store.getCount()};
     this.render()
-  }
-  tick() {
-    action.countUp(this.state.count + 1);
   }
   render() {
     this.textCount.innerText = this.state.count;

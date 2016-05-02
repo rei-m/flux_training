@@ -4,13 +4,14 @@ export default class Store extends Emitter {
   constructor(dispatcher) {
     super();
     this.count = 0;
-    dispatcher.on('countUp', this.onCountUp.bind(this));
+    dispatcher.on('updateCount', this.onUpdateCount.bind(this));
   }
 
   getCount() {
     return this.count;
   }
-  onCountUp(count) {
+
+  onUpdateCount(count) {
     this.count = count;
     this.emit('CHANGE');
   }

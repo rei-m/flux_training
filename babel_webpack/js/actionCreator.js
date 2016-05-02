@@ -3,7 +3,7 @@ export default class ActionCreator {
     this.dispatcher = dispatcher;
   }
 
-  countUp(data){
-    this.dispatcher.emit("countUp", data);
+  updateCount(data){
+    this.dispatcher.emit("updateCount", data);
   }
 }

@@ -6,7 +6,7 @@
 </head>
 <body>
 <div class="">
-  <a href="http://azu.github.io/slide/react-meetup/flux.html" target="_blank">http://azu.github.io/slide/react-meetup/flux.html</a>の写経。 <br>
+  <a href="http://azu.github.io/slide/react-meetup/flux.html" target="_blank">http://azu.github.io/slide/react-meetup/flux.html</a>の写経 + @ <br>
   Reactは使ってないのでViewに反映しているところはぴゅあなJS。babelで書いて依存性の解決はwebpackを使用。
   <br>
   試す場合は clone して
@@ -26,8 +26,10 @@
 <br>
 <br>
 
-<div id="count-up">
-  <button type="button" name="button">Count Up</button>
+<div id="count">
+  <button id="button__count-up" type="button" name="button">Count Up</button>
+  <button id="button__count-down" type="button" name="button">Count Down</button>
+  <button id="button__count-up--async" type="button" name="button">Count Up Async</button>
   <p>
     Count: <span id="text-tount"></span>
   </p>
