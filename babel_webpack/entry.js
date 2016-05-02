@@ -1,7 +1,3 @@
-import ActionCreator from './js/ActionCreator'
-import Store from './js/Store'
-import EventEmitter from './js/EventEmitter'
+import Component from './js/Component';
 
-const dispatcher = new EventEmitter();
-const action = new ActionCreator(dispatcher);
-const store = new Store(dispatcher);
+const countUpComponent = new Component(document.getElementById('count-up'));

@@ -10,7 +10,7 @@ export default class Store extends Emitter {
   getCount() {
     return this.count;
   }
-  onCountUp() {
+  onCountUp(count) {
     this.count = count;
     this.emit('CHANGE');
   }

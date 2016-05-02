@@ -1,4 +1,4 @@
-export default class ActionCreator{
+export default class ActionCreator {
   constructor(dispatcher) {
     this.dispatcher = dispatcher;
   }
